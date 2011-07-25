@@ -1,0 +1,45 @@
+-------------------------
+owEZFlow :
+-------------------------
+
+owEZFlow extends ezFlow extension.
+
+With owEZFlow, you can :
+ - define custom attributes even if ManualAddingOfItems is enabled.
+ - define custom labels for custom attributes
+ - define "object relation" custom attributes
+
+-------------------------
+Installation instructions
+-------------------------
+
+1) If it does not exist, create a directory named "extension" in the base ezpublish directory.
+
+
+2) Unpack the ZIP file and copy the directory "owezflow" to the extension directory.
+
+
+3) Activate extension :
+---------------------------------
+
+WARNING : you MUST active owezflow BEFORE ezflow extension to load the templates
+
+Add the following to your settings/override/site.ini.append.php file:
+[ExtensionSettings]
+ActiveExtensions[]=owezflow
+ActiveExtensions[]=ezflow
+
+
+4) Write your own settings in your block.ini.append.php
+
+
+5) Clear cache
+---------------------------------
+Clear INI and template caches. (from admin 'Setup' tab or commandline)
+
+
+---------------------------------------------
+Hope you find it useful! 
+
+Simon Boyer
+
