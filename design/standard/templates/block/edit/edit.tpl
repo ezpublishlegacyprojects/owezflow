@@ -64,7 +64,6 @@
 		{def $use_browse_mode = ezini( $block.type, 'UseBrowseMode', 'block.ini' )}
         {foreach $custom_attributes as $custom_attrib}
             {if eq( $use_browse_mode[$custom_attrib], 'true' )}
-
                 <p>
                 <label>{if ne($custom_attributes_label[$custom_attrib],'')}{$custom_attributes_label[$custom_attrib]|wash}{else}{$custom_attrib}{/if} : 
                 {if is_set( $block.custom_attributes[$custom_attrib] )}
@@ -99,8 +98,9 @@
                 {/if}
 				</p>
             {/if}
-            {undef $use_browse_mode}
+            
         {/foreach}
+        {undef $use_browse_mode}
 		</div>
        {/if}
     {if $is_dynamic}
