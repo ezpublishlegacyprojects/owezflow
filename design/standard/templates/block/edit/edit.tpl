@@ -68,7 +68,7 @@
                 <label>{if ne($custom_attributes_label[$custom_attrib],'')}{$custom_attributes_label[$custom_attrib]|wash}{else}{$custom_attrib}{/if} : 
                 {if is_set( $block.custom_attributes[$custom_attrib] )}
                         {if eq( $use_browse_mode[$custom_attrib], 'true' )}
-                            <span class="legend" style="font-weight: normal"><i>{fetch( 'content', 'node', hash( 'node_id', $block.custom_attributes[$custom_attrib] ) ).name}</i></span>
+                            <span class="legend" style="font-weight: normal"><i>{fetch( 'content', 'node', hash( 'node_id', $block.custom_attributes[$custom_attrib] ) ).url_alias}</i></span>
                         {/if}
                 {/if}
                 </label>
