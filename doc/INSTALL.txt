@@ -38,6 +38,12 @@ ActiveExtensions[]=ezflow
 Clear INI and template caches. (from admin 'Setup' tab or commandline)
 
 
+6) Install workflow
+---------------------------------
+You can set a worflow to update objects containing eZFlow blocks relating to published object.
+To do this, add "eZFlow related Update" cronjob after publish a new object.
+
+
 ---------------------------------------------
 Hope you find it useful! 
 
