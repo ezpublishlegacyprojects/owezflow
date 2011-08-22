@@ -23,7 +23,7 @@ class ezflowUpdateType  extends eZWorkflowEventType
     	$parameters = $process->attribute( 'parameter_list' );
     	
 	    $db = eZDB::instance();
-	    $resArray = $db->arrayQuery( "SELECT ezm_block.node_id FROM ezm_pool, ezm_block WHERE ezm_pool.block_id=ezm_block.id AND ezm_pool.object_id='".$parameters['object_id']."'" );
+	    $resArray = $db->arrayQuery( "SELECT DISTINCT ezm_block.node_id FROM ezm_pool, ezm_block WHERE ezm_pool.block_id=ezm_block.id AND ezm_pool.object_id='".$parameters['object_id']."'" );
 	
 	    foreach($resArray as $res) {
 	    	$obj=eZContentObject::fetchByNodeID( $res['node_id']);
